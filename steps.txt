@@ -1,0 +1,37 @@
+Gen-ai-project:
+Information-retrieval-system:
+back end steps:
+->the user will give pdf
+->extract data from pdf
+->convert the data into text chunks
+->then apply embedding model and get vector embeddings
+->build the semantic index
+->store the semantic index in vectoredDB(FAISS)
+
+
+front end:
+->user will give a query
+->convert into query embedding
+->apply semantic search on the vectoredDB
+->DB will return some ranked result
+->by using LLM we will extract the exact answer
+
+How to commit in git through git bash?
+->git add.
+->git commit -m "comment on the change"
+->git push origin main
+
+Steps:
+->make a git hub(name,public,readme,gitignore,mit)
+->clone it(git clone link)
+->create a template.py file(this will automatically create the folder structures)
+->just mention the folder or file names and path
+->type in gitbash-- python template.py
+->do the setup.py
+->create venv
+->pip install -r requirements.txt
+->paste your google api key(https://aistudio.google.com/app/apikey) in the .env file
+->.env file is included in the gitignore file bacause we are storing the api key in 
+   that file so while committing the .env file will be ignored
+->we can access the .env file using python package python-dotenv
+->
