@@ -34,4 +34,13 @@ Steps:
 ->.env file is included in the gitignore file bacause we are storing the api key in 
    that file so while committing the .env file will be ignored
 ->we can access the .env file using python package python-dotenv
+->use trial.ipynb to do all the trial coding
+->fetch the api key using load_env package
+APP dev starts:
+->go to app.py
+->write the streamlit code and save it
+->go to bash and type-- streamlit run app.py
+Write all the funtions related to embeddinds,database,chunking in the helper.py
+->after writing all the necessary functions,implement this is the app.py
+
 ->
