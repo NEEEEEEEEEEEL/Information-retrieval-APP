@@ -2,6 +2,9 @@ import streamlit as st
 from src.helper import get_pdf_text, get_text_chunks, get_vector_store, get_conversational_chain
 
 
+# bg-image
+
+
 def user_input(user_question):
     # initializing the session and storing the question
     response = st.session_state.conversation({"question": user_question})
@@ -18,8 +21,42 @@ def main():
     # setting the title of the website
     st.set_page_config("Information Retrieval-APP")
 
+    # Title
+    original_title = '<h1 style="font-family: serif; color:white; font-size: 20px;">Information-Retrieval-APP </h1>'
+    st.markdown(original_title, unsafe_allow_html=True)
+
     # setting the header of the app
-    st.header("Information-Retrieval-APP")
+    # st.header("Information-Retrieval-APP")
+
+    # Set the background image
+    background_image = """
+    <style>
+    [data-testid="stAppViewContainer"] > .main {
+        background-image: url("https://images.unsplash.com/photo-1542281286-9e0a16bb7366");
+        background-size: 100vw 100vh;  # This sets the size to cover 100% of the viewport width and height
+        background-position: center;  
+        background-repeat: no-repeat;
+    }
+    </style>
+    """
+    st.markdown(background_image, unsafe_allow_html=True)
+
+    # input-style
+    input_style = """
+    <style>
+    input[type="text"] {
+        background-color: transparent;
+        color: #a19eae;  // This changes the text color inside the input box
+    }
+    div[data-baseweb="base-input"] {
+        background-color: transparent !important;
+    }
+    [data-testid="stAppViewContainer"] {
+        background-color: transparent !important;
+    }
+    </style>
+    """
+    st.markdown(input_style, unsafe_allow_html=True)
 
     # user-input
     user_question = st.text_input("How May I Help You?")
