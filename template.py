@@ -15,7 +15,7 @@ list_of_files = [
 
 ]
 
-# logic
+# this part automatically creates the folder structure
 for filepath in list_of_files:
     filepath = Path(filepath)
     filedir, filename = os.path.split(filepath)
